@@ -41,7 +41,7 @@ def compute_evaluation_index(config, X: ndarray, U: ndarray, V: ndarray, m: floa
         print(f"Chỉ số CS: {cs:.6f}")
 if __name__ == '__main__':
     # Load file config
-    config = load_config('config/fcm_data.yaml')
+    config = load_config('config/sscfcm_data.yaml')
 
     
     # fetch dataset 
