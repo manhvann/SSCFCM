@@ -1,0 +1,29 @@
+# General settings
+maxiter: 10000
+m: 2
+epsilon: 0.00001
+seed: 42
+data_id: 602 # 53: Iris, 109: Wine, 602: DryBean
+
+# Validity indices to calculate
+validity_indices:
+  dunn_index: false  
+  davies_bouldin_index: true # ok
+  separation_index: true # ok
+  calinski_harabasz_index: true # ok
+  silhouette_index: true
+  partition_coefficient: true # ok
+  classification_entropy: true 
+  fuzzy_hypervolume: true # ok
+  cs_index: true
+
+# Debug settings
+debug:
+  print_time: true
+  print_image_size: true
+  print_steps: true
+  print_U: true
+  print_V: true
+
+fcm: true
+sscfcm: true
