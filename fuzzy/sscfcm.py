@@ -129,7 +129,6 @@ class CollaborativeSCFCM:
         # Cập nhật ma trận thành viên U
         model.membership = self.update_membership(model=model, X=X, v_tilde=v_tilde, N=N, C=C, beta= self.betas[site_index])
 
-
         # Cập nhật ma trận tâm cụm centroids
         model.centroids = self.update_centroid(model=model, X=X, v_tilde=v_tilde, beta=self.betas[site_index])
 
@@ -174,8 +173,7 @@ class CollaborativeSCFCM:
         power = 2
         U = distances[:, :, None] * ((1 / distances)[:, None, :])
         U = (U ** power).sum(axis=2)
-        return 1 / U
-        
+        return 1 / U    
 
     def predict(self, new_data: np.ndarray):
         predictions = [model.predict(new_data=new_data) for model in self.__datasites]
